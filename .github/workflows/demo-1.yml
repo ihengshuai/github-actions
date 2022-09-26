@@ -1,11 +1,23 @@
-name: github-action-demo1
-on: [push]
+name: deploy github page using vuepress
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-  step-job1-name:
+  prepare:
+    name: prepare_environment
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: "16"
-      - run: echo hello world!
+          node-version: 16
+        run: echo environment is ready
+  install:
+    name: install
+    runs-on: ubuntu-latest
+    steps:
+      - run: yarn && yarn build
+      - run: echo build
+      - run: ls
