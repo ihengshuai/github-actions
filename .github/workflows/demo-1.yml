@@ -14,10 +14,6 @@ jobs:
         with:
           node-version: 16
       - run: echo environment is ready
-  install:
-    name: install
-    runs-on: ubuntu-latest
-    steps:
       - run: yarn && yarn build
       - run: echo build
       - run: ls
