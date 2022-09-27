@@ -10,6 +10,7 @@ git init
 git remote add --fetch origin "$remote"
 git checkout -b gh-pages
 # copy over or recompile the new site
+echo $BUNDLE_DIST
 cp -a ../$BUNDLE_DIST/* . 
 git config --global user.email "wsm_1105@163.com"
 git config --global user.name "ihengshuai"
