@@ -11,8 +11,8 @@ env:
   BUNDLE_DIST: ${{ secrets.BUNDLE_DIST }}
 
 jobs:
-  prepare:
-    name: prepare_environment
+  depoly:
+    name: deploy github page
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
