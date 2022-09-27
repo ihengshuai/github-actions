@@ -21,6 +21,7 @@ jobs:
           node-version: 16
       - name: build project
         run: yarn && yarn build --dest $BUNDLE_DIST
+      - run: ls
       - name: deploy github page
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
