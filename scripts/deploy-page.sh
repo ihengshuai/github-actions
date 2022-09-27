@@ -3,13 +3,13 @@ set -e
 remote="$(git config remote.origin.url)"
 
 echo $remote
-echo pwd
+pwd
 cd ..
 mkdir gh-pages-branch
 ls
 cd gh-pages-branch
 git init
-git remote add --fetch origin "$remote"
+git remote add origin "$remote"
 git checkout -b gh-pages
 
 echo $BUNDLE_DIST
