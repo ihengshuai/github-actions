@@ -2,21 +2,18 @@
 
 set -e
 
-echo $REPOSITORY
-echo $OWNER
-
 mkdir gh-pages-branch
 cd gh-pages-branch
 
 git init
-githubUrl="https://ihengshuai:${ACCESS_TOKEN}@github.com/ihengshuai/github-actions.git"
+githubUrl="https://${OWNER}:${ACCESS_TOKEN}@github.com/${REPOSITORY}"
 git checkout -b gh-pages
 
 echo $BUNDLE_DIST
 
 cp -a ../$BUNDLE_DIST/* .
 git config --global user.email "wsm_1105@163.com"
-git config --global user.name "ihengshuai"
+git config --global user.name $OWNER
 git add . -A
 git commit -m 'update page'
 # git push -f origin -q gh-pages
