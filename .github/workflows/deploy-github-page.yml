@@ -25,4 +25,4 @@ jobs:
         run: pnpm install && pnpm build --dest $BUNDLE_DIST
       - run: ls
       - name: deploy page
-        run: chmod +x ../../scripts/deploy-page.sh && ../../scripts/deploy-page.sh
+        run: chmod +x ./scripts/deploy-page.sh && ./scripts/deploy-page.sh
