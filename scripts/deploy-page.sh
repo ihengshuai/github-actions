@@ -10,7 +10,6 @@ cd gh-pages-branch
 
 git init
 githubUrl="https://ihengshuai:${ACCESS_TOKEN}@github.com/ihengshuai/github-actions.git"
-git remote add --fetch origin "$remote"
 git checkout -b gh-pages
 
 echo $BUNDLE_DIST

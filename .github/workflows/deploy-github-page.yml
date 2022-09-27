@@ -11,7 +11,7 @@ env:
   ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
   BUNDLE_DIST: ${{ secrets.BUNDLE_DIST }}
   REPOSITORY: ${{ github.repository }}
-  OWNER: ${{ github.owner }}
+  OWNER: ${{ github.repository_owner }}
 
 jobs:
   build-and-deploy:
