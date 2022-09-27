@@ -12,7 +12,7 @@ git checkout -b gh-pages
 echo $BUNDLE_DIST
 
 cp -a ../$BUNDLE_DIST/* .
-git config --global user.email "wsm_1105@163.com"
+git config --global user.email $EMAIL
 git config --global user.name $OWNER
 git add . -A
 git commit -m 'update page'
