@@ -2,6 +2,9 @@
 
 set -e
 
+echo $REPOSITORY
+echo $OWNER
+
 mkdir gh-pages-branch
 cd gh-pages-branch
 

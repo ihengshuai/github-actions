@@ -22,8 +22,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: echo $OWNER
-      - run: echo ${{ toJSON(github) }}
       - name: install pnpm
         run: yarn global add pnpm
       - name: build project
