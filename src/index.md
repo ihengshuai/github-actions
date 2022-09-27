@@ -5,7 +5,7 @@ tagline: this is circleci-demo of vuepress site
 actionText: Quick Start →
 actionLink: /guide/
 features:
-- title: Feature 1 Title
+- title: update...
   details: Feature 1 Description
 - title: Feature 2 Title
   details: Feature 2 Description
