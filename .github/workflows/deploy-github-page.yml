@@ -28,10 +28,11 @@ jobs:
       - name: build project
         run: pnpm install && pnpm build --dest $BUNDLE_DIST
       - run: ls
-      # - name: deploy page
-      #   run: chmod +x ./scripts/deploy-page.sh && ./scripts/deploy-page.sh
-      - name: deploy github page
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          branch: gh-pages
-          folder: ${{ env.BUNDLE_DIST }}
+      - name: deploy page
+        run: chmod +x ./scripts/deploy-page.sh && ./scripts/deploy-page.sh
+      # use other action
+      # - name: deploy github page
+      #   uses: JamesIves/github-pages-deploy-action@4.1.1
+      #   with:
+      #     branch: gh-pages
+      #     folder: ${{ env.BUNDLE_DIST }}
