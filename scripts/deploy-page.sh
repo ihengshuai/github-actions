@@ -1,5 +1,5 @@
 set -e
-
+echo $ACCESS_TOKEN
 remote="$(git config remote.origin.url)"
 
 echo $remote
