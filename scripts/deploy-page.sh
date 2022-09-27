@@ -2,14 +2,9 @@
 
 set -e
 
-echo $ACCESS_TOKEN
-
-remote=$(git config remote.origin.url)
-
-echo $remote
-
 mkdir gh-pages-branch
 cd gh-pages-branch
+
 git init
 githubUrl="https://ihengshuai:${ACCESS_TOKEN}@github.com/ihengshuai/github-actions.git"
 git remote add --fetch origin "$remote"

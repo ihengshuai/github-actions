@@ -10,6 +10,8 @@ on:
 env:
   ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
   BUNDLE_DIST: ${{ secrets.BUNDLE_DIST }}
+  REPOSITORY: ${{ github.repository }}
+  OWNER: ${{ github.owner }}
 
 jobs:
   build-and-deploy:
@@ -20,6 +22,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - run: echo {{ toJSON(github) }}
       - name: install pnpm
         run: yarn global add pnpm
       - name: build project
