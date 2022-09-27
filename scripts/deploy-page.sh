@@ -3,9 +3,11 @@ set -e
 remote=$(git config remote.origin.url)
 
 echo $remote
-
-mkdir ../gh-pages-branch
-cd ../gh-pages-branch
+echo pwd
+cd ..
+mkdir gh-pages-branch
+ls
+cd gh-pages-branch
 git init
 git remote add --fetch origin "$remote"
 git checkout -b gh-pages
