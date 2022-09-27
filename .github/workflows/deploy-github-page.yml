@@ -8,6 +8,7 @@ on:
       - main
 
 env:
+  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
   BUNDLE_DIST: ${{ secrets.BUNDLE_DIST }}
 
 jobs:
