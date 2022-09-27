@@ -1,6 +1,6 @@
 set -e
 
-remote="git@github.com:ihengshuai/github-actions.git"
+remote="$(git config remote.origin.url)"
 
 echo $remote
 echo pwd
