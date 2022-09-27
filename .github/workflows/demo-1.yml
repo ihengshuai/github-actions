@@ -8,7 +8,7 @@ on:
       - main
 
 env:
-  BUNDLE_DIST: ${{ secret.BUNDLE_DIST }}
+  BUNDLE_DIST: ${{ secrets.BUNDLE_DIST }}
 
 jobs:
   prepare:
