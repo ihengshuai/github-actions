@@ -18,6 +18,8 @@ jobs:
           node-version: 16
       - name: install pnpm
         run: yarn global add pnpm
+      - name: install depends
+        run: pnpm install
       - name: test project
         run: pnpm run test
   
