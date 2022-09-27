@@ -23,7 +23,7 @@ git config --global user.name "ihengshuai"
 git add . -A
 git commit -m 'update page'
 # git push -f origin -q gh-pages
-git push -f $githubUrl -q master:gh-pages
+git push -f $githubUrl -q gh-pages
 cd ..
 rm -rf gh-pages-branch
 echo deploy successfully
