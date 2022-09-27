@@ -12,7 +12,7 @@ env:
   BUNDLE_DIST: ${{ secrets.BUNDLE_DIST }}
 
 jobs:
-  depoly:
+  build-and-deploy:
     name: deploy github page
     runs-on: ubuntu-latest
     steps:
@@ -27,5 +27,3 @@ jobs:
       - run: ls
       - name: deploy page
         run: chmod +x ./scripts/deploy-page.sh && ./scripts/deploy-page.sh
-        with:
-          GITHUB_TOKEN: $ACCESS_TOKEN
