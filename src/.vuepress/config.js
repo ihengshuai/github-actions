@@ -4,10 +4,10 @@ const { cwd } = require('process');
 
 module.exports = {
   dest: path.join(cwd(), "dist"),
-  base: '/github-actions/',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
+  base: '/github-actions/',
   title: 'Vuepress Docs Boilerplate',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description

@@ -3,6 +3,12 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  BUNDLE_DIST: ${{ secret.BUNDLE_DIST }}
 
 jobs:
   prepare:
@@ -13,12 +19,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: echo environment is ready
-      - run: yarn && yarn build
-      - run: echo build
-      - run: ls
-      - name: Deploy
+      - name: build project
+        run: yarn && yarn build --dest $BUNDLE_DIST
+      - name: deploy github page
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-pages
-          folder: dist
+          folder: $BUNDLE_DIST
