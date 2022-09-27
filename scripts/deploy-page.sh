@@ -14,8 +14,10 @@ echo $BUNDLE_DIST
 
 cp -a ../$BUNDLE_DIST/* .
 
-git config --global user.email {{ github.email }}
-git config --global user.name {{ github.name }}
+echo ${github.email}
+
+git config --global user.email "wsm_1105@163.com"
+git config --global user.name "ihengshuai"
 git add . -A
 git commit -m 'update page'
 git push -f origin -q gh-pages
