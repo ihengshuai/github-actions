@@ -6,4 +6,5 @@ test("test demo", () => {
     // this is a error and will being fix
     expect(6).toBe(6)
     expect(7).toBe(7)
+    expect(8).toBe(8)
 })
