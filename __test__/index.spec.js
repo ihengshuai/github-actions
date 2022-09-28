@@ -7,4 +7,5 @@ test("test demo", () => {
     expect(6).toBe(6)
     expect(7).toBe(7)
     expect(8).toBe(8)
+    expect(9).toBe(9)
 })
