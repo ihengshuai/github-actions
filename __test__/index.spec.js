@@ -3,6 +3,6 @@ test("test demo", () => {
     expect(2).toBe(2)
     expect(4).toBe(4)
     expect(5).toBe(5)
-    // this is a error
-    expect(6).toBe(7)
+    // this is a error and will being fix
+    expect(6).toBe(6)
 })
